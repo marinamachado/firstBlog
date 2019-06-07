@@ -16,5 +16,5 @@ class Post(models.Model):
         self.publishedDate = timezone.now()
         self.save()
 
-    def __getTitle___(self):
+    def __str__(self):
         return self.title

@@ -1,36 +1,31 @@
-
 <html>
-	<head> <!--Informacoes que nao estao na tela-->
+    <head>
+        <title>Blog Django Girls</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Blog Django Girls</a></h1>
+        </div>
 
-		<title>Onde doar</title>
-		
+        {% for post in posts %}
 
-	</head>
+        	<div>
+        		<p> publicado em :{{post.publishedDate}}</p>
+        		<h2><a href=""> {{post.title}} </a></h2>
+        		<p>{{post.text|linebreaksbr}}</p>
+        	</div>
+		{% endfor %}
 
-	<body> <!--Informacoes que estao na tela-->
+        <!-- <div>
+            <p>publicado: 14.06.2014, 12:14</p>
+            <h2><a href="">Meu primeiro post</a></h2>
+            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        </div>
 
-		<!--<p>Hi there!</p> paragrafo-->
-		<div>
-			<h1> <a href="/"> <strong> Onde doar Blog </strong> </a> </h1>
-		</div>
-		
-		<div>
-			<h2><em>Ache onde doar qualquer coisa que voce tenha em casa</em></h2>
-		</div>
-
-		<div>
-			<p>Publicado hoje mesmo</p>
-			<h3> <a href=""> Primeiro post </a> </h3>
-			<p> Sobre várias instituições aleatórias </p>
-		</div>
-
-		<div>
-			<p>Publicado hoje depois</p>
-			<h3> <a href=""> Segundo Post </a> </h4>
-		</div>
-
-
-	</body>
-
-
+        <div>
+            <p>publicado: 14.06.2014, 12:14</p>
+            <h2><a href="">Meu segundo post</a></h2>
+            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
+        </div> -->
+    </body>
 </html>
